@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<button style="color:green; font-size:20px;"><a th:href="@{/room-types}"><i><b>Add Hotel RoomType</b></i></a></button>
+<body>
+<a style="color:red;background-color:light green; font-size:20px;" href="logout" target="_blank"><b>Logout</b></a>
+<table border="4px">
+
+    <thead>
+    <tr>
+        <th style="color:blue; font-size:20px;">Id</th>
+        <th style="color:blue; font-size:20px;">Name</th>
+        <th style="color:blue; font-size:20px;">Action</th>
+        <th style="color:blue; font-size:20px;">Action</th>
+
+    </tr>
+
+    </thead>
+    <tbody>
+    <tr th:each="roomType:${roomType}">
+
+        <td th:text="${roomType.id}"></td>
+        <td th:text="${roomType.name}"></td>
+
+        <td>
+            <button>
+                <b>
+                <a style="color:green;font-size:15px;" th:href="@{/room-type/update/{id} (id=${roomType.id})}">Edit</a>
+                </b>
+            </button>
+        </td>
+
+        <td>
+            <button>
+                <b>
+                <a style="color:red;font-size:15px;"th:href="@{/room-type/delete/{id} (id=${roomType.id})}">Delete</a>
+                </b>
+            </button>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

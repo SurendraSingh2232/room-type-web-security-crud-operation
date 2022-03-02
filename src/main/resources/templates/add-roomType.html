@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<body style="background-color:gray;"/>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h1>
+        <i>
+            Room-Type-Crud-Operation-With-Security
+        </i>
+    </h1>
+
+</head>
+<table style="background-color:gray">
+    <body>
+    <form method="post" th:action="@{/room-types}" th:object="${roomType}">
+        <label><b>ID: </b></label>
+        <input type="text" name="id" field="${roomType.id}"> <br><br>
+
+        <label><b>NAME :  </b></label>
+        <input type="text" name="name" field="${roomType.name}"><br><br>
+
+        <input type="submit" name="save" align="right"> <br>
+
+    </form>
+    </body>
+</table>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Log Out!</title>
+</head>
+<body style="background-color:light yellow;">
+<h1 style="color:green;font-size:50px;" th:inline="text"><b><i>@ Here you can SignOut</i></b></h1>
+<h2 style="color:blue;font-size:30px;" th:inline="text"><b><i>@Are you sure you want to SignOut </i></b></h2>
+<form th:action="@{/logout}" method="post">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcNLIeF1uMcsNW6r3uFRQjPl9h9-7OxkVBKw&usqp=CAU" width="700",height="0">
+    <input style="color:red;font-size:20px;" type="submit" value="Sign Out"/>
+
+</form>
+</body>
+</html>
